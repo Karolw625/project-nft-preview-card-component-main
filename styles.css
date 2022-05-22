@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    /*Primary colors*/
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    /*Neutral colors*/
+    --very-dark-blue-mainbg: hsl(217, 54%, 11%);
+    --very-dark-blue-cardbg: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+
+    /*Others*/
+    --cyan-opacity: hsla(178, 100%, 50%, .5);
+}
+
+body {
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    color: var(--soft-blue);
+    background-color: var(--very-dark-blue-mainbg);
+}
+
+h1 {
+    color: var(--white);
+}
+
+p {
+    font-size: 18px;
+}
+
+a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--cyan)
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/*Section*/
+
+.card-ethereum {
+    width: 295px;
+    padding: 23px;
+    margin: 0 1em;
+    background-color: var(--very-dark-blue-cardbg);
+    border-radius: 15px;
+    box-shadow: 0 0 5em #000000;
+}
+
+/*Images*/
+
+.card-image {
+    position: relative;
+}
+
+.card-image:hover .card-image-overlay {
+    display: block;
+}
+
+.image-equilibrium {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card-image-overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--cyan-opacity);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.image-equilibrium-view{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/*Card information*/
+
+.card-details {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+
+.amount-of-ethereum {
+    font-weight: 600;
+    color: var(--cyan);
+}
+
+.amount-of-time-left {
+    font-weight: 400;
+}
+
+.amount-of-time-left,
+.amount-of-ethereum {
+    display: flex;
+    align-items: center;
+}
+
+.amount-of-time-left span,
+.amount-of-ethereum span {
+    padding-left: 8px;
+}
+
+/*Author*/
+
+.author-info {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid var(--very-dark-blue-line);
+}
+
+.author-info span {
+    padding-left: 15px;
+    font-weight: 400;
+}
+
+.image-avatar {
+    width: 35px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+}
+
+
+
